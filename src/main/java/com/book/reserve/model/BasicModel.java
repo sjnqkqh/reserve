@@ -1,17 +1,15 @@
 package com.book.reserve.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Entity(name="basic")
+@Entity
 @Getter
+@Table(name = "tb_model")
 @NoArgsConstructor
-public class BasicModel {
+public class BasicModel extends CommonBaseModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
