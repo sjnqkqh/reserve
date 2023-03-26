@@ -10,12 +10,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfiguration {
 
-    @Bean
-    public SecurityFilterChain configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeHttpRequests((requests) -> requests
-                        .anyRequest().permitAll())
-                .httpBasic();
-        return http.build();
-    }
+	@Bean
+	public SecurityFilterChain configure(HttpSecurity http) throws Exception {
+		http
+			.authorizeHttpRequests((requests) -> requests
+				.anyRequest().permitAll())
+			.httpBasic();
+		return http.build();
+	}
 }

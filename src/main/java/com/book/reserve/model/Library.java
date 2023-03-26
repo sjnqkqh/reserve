@@ -7,21 +7,21 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Table(name = "tb_user")
 @Entity
-public class User extends CommonBaseModel {
+@Table(name = "tb_library")
+public class Library extends CommonBaseModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "login_id")
-	private String loginId;
-
+	@Column(name = "library_name")
 	private String name;
 
-	private String email;
+	@Column(name = "phone_number")
+	private String phoneNumber;
 
-	@Column(name = "enc_password")
-	private String encPassword;
+	@Column(name = "address")
+	private String address;
 
 }
+
